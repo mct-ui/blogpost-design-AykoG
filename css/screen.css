@@ -23,6 +23,8 @@ html {
     font-family: "droid-serif", Georgia, serif;
     color: #5c6366;
     padding: 48px 24px 24px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -67,9 +69,9 @@ h1, h2, h3 {
 
 h1 {
     font-size: 36px;
-    font-weight: normal;
     line-height: 40px;
     margin: 0 0 24px;
+    font-family: "Playfair Display", serif;
 }
 
 h2 {
