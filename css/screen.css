@@ -213,6 +213,10 @@ a:focus {
     padding: 0 24px;
 }
 
+.u-max-width-sm {
+    min-width: 36em;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {}
