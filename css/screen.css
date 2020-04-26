@@ -1,3 +1,9 @@
+/*
+    Fonts
+    ---
+    @font-face declarations
+*/
+
 @font-face {
     font-family: "Inter Web";
     font-weight: 400;
@@ -31,16 +37,18 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    margin: 0 auto;
-}
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  *
  * Customize the background color to match your design.
- */
+*/
+
+::-moz-selection {
+    background: #00E6A1;
+    color: white;
+    text-shadow: none;
+}
 
 ::selection {
     background: #00E6A1;
@@ -75,10 +83,6 @@ h1 {
     line-height: 40px;
     margin: 0 0 24px;
     font-family: "Playfair Display", serif;
-}
-
-*+h2 {
-    margin-top: 48px;
 }
 
 h2 {
@@ -126,7 +130,6 @@ blockquote {
     font-size: 23px;
     line-height: 32px;
     margin: 0 0 24px;
-    font-family: "Times New Roman", serif;
 }
 
 blockquote * {
@@ -138,7 +141,6 @@ figcaption {
     font-size: 12px;
     line-height: 16px;
     padding-top: 8px;
-    color: Grey;
 }
 
 hr {
@@ -155,7 +157,7 @@ a {
 
 a:visited,
 a:active {
-    color: #00E6A1;
+    color: #00B37D;
 }
 
 a:hover,
@@ -170,12 +172,14 @@ a:focus {
 .c-author {
     display: flex;
     align-items: center;
+    margin-bottom: 24px;
 }
 
 .c-author__image {
     width: 56px;
     height: 56px;
     border-radius: 100%;
+    margin-right: 16px;
 }
 
 .c-author__name, .c-author__meta {
@@ -265,8 +269,55 @@ a:focus {
     }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/*
+    Components: Quote
+*/
 
+.c-quote {
+    margin: 48px -24px;
+    padding: 24px;
+    color: #00B37D;
+    background-color: #F2FAF8;
+    /* border: 1px solid #B3FFE8; */
+}
+
+/*
+    Scope: Content
+    Specific behaviour inside s-content class
+*/
+
+.s-content * + h2 {
+    margin-top: 48px;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements.
+*/
+
+.u-max-width-sm {
+    max-width: 36em;
+}
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    Modify as content requires.
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (landscape tablets, desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
 
 /*
